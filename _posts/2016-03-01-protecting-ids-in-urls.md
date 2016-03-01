@@ -1,6 +1,5 @@
 ---
 layout: post
-tags: php, security
 title: Protecting IDs in URLs with authenticated encryption
 ---
 
