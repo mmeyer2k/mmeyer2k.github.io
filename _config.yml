@@ -1,1 +1,11 @@
-markdown: kramdown
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
+
+gems:
+  - jekyll-sitemap
+
+name: Michael Meyer
+url: http://mmeyer2k.github.io
+description: A blog
+twitter: mmeyer
