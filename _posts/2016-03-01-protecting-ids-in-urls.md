@@ -14,8 +14,14 @@ To demonstrate I will be using the AES 256 encryption functions in my own [dcryp
 First we need to generate a url
 ```php
 $id = \Dcrypt\Aes::encrypt('secret_id', 'password');
-$url = 'https://www.example.com/users/' . base62_encode($id);
+$url = 'https://www.example.com/users?id=' . base62_encode($id);
 # outputs something like:
-# http://www.example.com/users/1kt43UPAQmt6D900kuWGoi496ckUYr2mPKYsyMs070rA5lOMu1hNN8W7Y5Y2ePGqoECbmchC96mRO5bUXFozGn4n
+# http://www.example.com/users?id=1kt43UPAQmt6D900kuWGoi496ckUYr2mPKYsyMs070rA5lOMu1hNN8W7Y5Y2ePGqoECbmchC96mRO5bUXFozGn4n
 ```
 
+To decrypt, reverse the process:
+```php
+$id = \Dcrypt\Aes::decrypt(base62_decode($_GET['id']), 'password');
+```
+
+Now, any kind of tampering will result in a checksum mismatch and a thrown exception.
