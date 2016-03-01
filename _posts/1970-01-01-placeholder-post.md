@@ -9,6 +9,7 @@ Laravel 5 is awesome, but out of the box, it seems to only allow for a single we
 Most of the time, the public/ folder IS the webroot. For our purpose, public/example/ will be the new structure. This gives us the flexibility to add as many roots as needed.
 
 To turn /public/example into a webroot, place the following into /public/example/index.php:
+
 ```php
 <?php
 
