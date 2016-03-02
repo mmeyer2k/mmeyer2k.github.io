@@ -12,6 +12,7 @@ To demonstrate I will be using the AES 256 encryption functions in my own [dcryp
 First we need to generate a url..
 
 ```php
+<?php
 $id = \Dcrypt\Aes::encrypt('secret_id', 'password');
 $url = 'https://www.example.com/users?id=' . base62_encode($id);
 # outputs something like:
@@ -21,6 +22,7 @@ $url = 'https://www.example.com/users?id=' . base62_encode($id);
 To decrypt, reverse the process:
 
 ```php
+<?php
 $id = \Dcrypt\Aes::decrypt(base62_decode($_GET['id']), 'password');
 ```
 
