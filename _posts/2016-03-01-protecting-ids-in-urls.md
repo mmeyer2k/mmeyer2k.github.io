@@ -9,7 +9,8 @@ The only complete solution is to use authenticated encryption. An encrypted payl
 
 To demonstrate I will be using the AES 256 encryption functions in my own [dcrypt](https://github.com/mmeyer2k/dcrypt) encryption library and a URL friendly base62 encoder from my polyfill library called [retro](https://github.com/mmeyer2k/retro).
 
-First we need to generate a url
+First we need to generate a url..
+
 ```php
 $id = \Dcrypt\Aes::encrypt('secret_id', 'password');
 $url = 'https://www.example.com/users?id=' . base62_encode($id);
@@ -18,6 +19,7 @@ $url = 'https://www.example.com/users?id=' . base62_encode($id);
 ```
 
 To decrypt, reverse the process:
+
 ```php
 $id = \Dcrypt\Aes::decrypt(base62_decode($_GET['id']), 'password');
 ```
