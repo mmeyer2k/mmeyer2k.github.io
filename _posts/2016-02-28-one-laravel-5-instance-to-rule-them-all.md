@@ -28,9 +28,7 @@ Usually in Laravel 5, an applications's routes are stored at /app/Http/routes.ph
 ```php
 <?php
 
-if (defined('PUBLIC_SUBROOT')) {
-  require base_path('/resources/routes/' . PUBLIC_SUBROOT . '.php');
-}
+require base_path('/resources/routes/' . PUBLIC_SUBROOT . '.php');
 ```
 
 Now when a request comes into example.com (or where ever) Laravel will run and execute the /resources/routes/example.php file. Laravel should be working as usual now.
