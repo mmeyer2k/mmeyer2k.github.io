@@ -36,6 +36,6 @@ if (defined('PUBLIC_SUBROOT')) {
 Now when a request comes into example.com (or where ever) Laravel will run and execute the /resources/routes/example.php file. Laravel should be working as usual now.
 
 #### Some things will break!
-Route caching will certainly no longer work. Things like asset publishing may be more complicated.
+Route caching, asset publishing and some unit testing features will certainly no longer work. But this is a small price to pay when porting a large, multi-domain legacy application to Laravel.
 
 Enjoy!
