@@ -1,9 +1,6 @@
-
 ---
 layout: post
 title: Extending Blade to support continue and break
-category: posts
-draft: false
 ---
 
 Laravel's Blade templating engine is easy to extend. The following example service provider
