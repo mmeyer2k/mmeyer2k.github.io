@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Protecting IDs in URLs with authenticated encryption
+tags: [php, security]
 ---
 
 Passing identifiers inside of URL's is a very common practice, but it offers no security against manipulation of the ID value. Simple encoding of this value (via base64 or hex, for example) is trivial to reverse. Even more sophisticated techiniques like simple encryption with XOR is vulnerable to bit flipping attacks.

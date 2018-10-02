@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Redis Facade Namespace Collision
+tags: [redis, laravel]
+img-title: /images/redis-logo-wide.png
 ---
 
 ### Be careful when using phpredis and Laravel's `\Redis` facade!
