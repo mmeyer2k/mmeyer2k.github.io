@@ -1,6 +1,7 @@
 ---
 layout: post
 title: One Laravel 5 instance to rule them all
+tags: [laravel, php]
 ---
 
 Laravel 5 is awesome, but out of the box, it seems to only allow for a single web root to be served for each installation. However, with a few minor tweaks, one installation of the framework can power any number of applications.
