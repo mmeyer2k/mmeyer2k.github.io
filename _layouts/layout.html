@@ -13,9 +13,19 @@
     <!-- ✠✠✠✠ -->
     {% include head.html %}
     <body>
-        <div>
-            {% include sidebar.html %}
-            {{ content }}
+
+        <div class="row">
+            <div class="leftcolumn">
+                {% include sidebar.html %}
+            </div>
+
+            <div class="rightcolumn">
+                {{ content }}
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Footer</h2>
         </div>
     </body>
 </html>
