@@ -8,7 +8,7 @@ adds support for `continue` and `break` within loops with `@continue` and `@brea
 it is a best practice not to use logic like that in views, it is handy sometimes when porting
 legacy code.
 
-```php
+{% highlight php %}
 <?php
 
 namespace App\Providers;
@@ -18,11 +18,6 @@ use Illuminate\Support\ServiceProvider;
 
 class BladeExtendServiceProvider extends ServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     *
-     * @return void
-     */
     public function boot()
     {
         // Create a custom blade directive for the @continue and @break commands
@@ -34,14 +29,9 @@ class BladeExtendServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Register bindings in the container.
-     *
-     * @return void
-     */
     public function register()
     {
         //
     }
 }
-```
+{% endhighlight %}
