@@ -4,8 +4,8 @@ title: "Posts"
 tags: []
 ---
 
-<section class="content">
-    <ul class="listing">
+<div class="card">
+    <ul>
         {% for post in site.posts %}
         {% unless post.draft %}
         <li>
@@ -14,4 +14,4 @@ tags: []
         {% endunless %}
         {% endfor %}
     </ul>
-</section>
+</div>

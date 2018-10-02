@@ -1,6 +1,7 @@
 ---
-# this block has to be here
+#
 ---
+
 @charset "UTF-8";
 * {
   box-sizing: border-box;
@@ -9,17 +10,9 @@
 /* Add a gray background color with some padding */
 body {
   font-family: Helvetica;
-  padding: 20px;
-  background-color: #f1f1f1;
+  min-width: 360px;
+  background-color: #e1e1e1;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
 }
 
 a {
@@ -30,7 +23,7 @@ a {
 /* Left column */
 .leftcolumn {
   float: left;
-  width: 25%;
+  width: 150px;
   padding: 0;
   text-align: right;
 }
@@ -38,9 +31,8 @@ a {
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 75%;
-  max-width: 650px;
   padding-left: 20px;
+  width: 640px;
 }
 
 /* Add a card effect for articles */
@@ -48,6 +40,7 @@ a {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  box-shadow: 10px 10px 0px;
 }
 
 /* Clear floats after the columns */
@@ -70,5 +63,11 @@ a {
   .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
+    max-width: inherit;
+  }
+  /* make left col full width and look correct */
+  .card {
+    width: inherit;
+    float: inherit;
   }
 }

@@ -1,6 +1,4 @@
 permalink: /posts/:title
-rdiscount:
-  extensions: [smart]
 
 gems:
   - jekyll-sitemap
@@ -8,4 +6,4 @@ gems:
 name: mmeyer2k
 url: http://mmeyer2k.github.io
 description: A blog about programming.
-twitter: mmeyer2k
+highlighter: rouge
