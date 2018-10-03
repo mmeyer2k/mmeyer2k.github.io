@@ -14,22 +14,12 @@
     {% include head.html %}
     <body>
 
-        <div id="landing-strip">
-            <div class="row">
-                <div class="leftcolumn">
-                    {% include sidebar.html %}
-                </div>
-
-                <div class="rightcolumn">
-                    {{ content }}
-                </div>
-            </div>
+        <div class="leftcolumn">
+            {% include sidebar.html %}
         </div>
 
-        <!--
-        <div class="footer">
-            <h2>Footer</h2>
+        <div class="rightcolumn">
+            {{ content }}
         </div>
-        -->
     </body>
 </html>

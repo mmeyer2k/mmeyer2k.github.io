@@ -1,23 +1,23 @@
 ---
 layout: layout
 ---
-
-<div class="card">
-    {% if page.img-title %}
-    <div class="col-md-12">
-        <img src="/images/redis-logo-wide.png" alt="" class="img-responsive"/>
-    </div>
-    {% endif %}
-
-    <h1>
-        <a href="{{ page.url }}">{{ page.title }}</a>
-    </h1>
-
-    <small>
-        {{ page.date | date: "%B %e, %Y" }}
-    </small>
-
-    <hr>
-
-    {{ content }}
+{% if page.img-title %}
+<div class="col-md-12">
+    <img src="/images/redis-logo-wide.png" alt="" class="img-responsive"/>
 </div>
+{% endif %}
+
+<h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+</h1>
+
+<small>
+    {{ page.date | date: "%B %e, %Y" }}
+    {% for tag in page.tags %}
+    <a href="/tag/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+</small>
+
+<hr>
+
+{{ content }}
