@@ -7,6 +7,17 @@
   box-sizing: border-box;
 }
 
+#landing-strip {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+#blogname {
+  font-size: 13pt;
+  text-decoration: none;
+}
+
 /* Add a gray background color with some padding */
 body {
   font-family: Helvetica;
@@ -19,23 +30,25 @@ a {
   color: #227ce8;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
+a:hover {
+  text-decoration: none;
+}
+
+
 .leftcolumn {
+  font-family: monospace;
   float: left;
-  width: 150px;
+  width: 140px;
   padding: 0;
   text-align: right;
 }
 
-/* Right column */
 .rightcolumn {
   float: left;
   padding-left: 20px;
-  width: 640px;
+  width: 650px;
 }
 
-/* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 20px;
@@ -50,7 +63,6 @@ a {
   clear: both;
 }
 
-/* Footer */
 .footer {
   padding: 20px;
   text-align: center;
@@ -58,16 +70,29 @@ a {
   margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+ul {
+  list-style: none;
+}
+
+.blinking-cursor {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
-    max-width: inherit;
   }
-  /* make left col full width and look correct */
-  .card {
-    width: inherit;
-    float: inherit;
+  .leftcolumn {
+    text-align: left;
+    ul li {
+      display: inline;
+    }
   }
 }
