@@ -10,7 +10,7 @@ I get it, serializing / storing / deserializing closures is not a good practice.
 Security vulnerabilities are just one of the many good reasons to ditch them.
 
 ---
-
+Add this job to your jobs folder (normally `app/Jobs`).
 {% highlight php %}
 <?php
 
@@ -27,8 +27,10 @@ class ClosureJob extends Command implements ShouldQueue
     public function __construct(\Closure $closure)
     {
         $serializer = new Serializer();
+        
+        $serialized = $serializer->serialize($closure);
 
-        $this->closure = \Crypt::encryptString($serializer->serialize($closure));
+        $this->closure = \Crypt::encryptString($serialized);
     }
 
     public function handle()

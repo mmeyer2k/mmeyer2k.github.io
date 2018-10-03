@@ -10,7 +10,7 @@
 #landing-strip {
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 760px;
 }
 
 #blogname {
@@ -22,7 +22,7 @@
 body {
   font-family: Helvetica;
   min-width: 360px;
-  background-color: #e1e1e1;
+  background-color: #f1f1f1;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -33,7 +33,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-
 
 .leftcolumn {
   font-family: monospace;
@@ -89,10 +88,16 @@ ul {
     width: 100%;
     padding: 0;
   }
+  .card {
+    box-shadow: none;
+  }
   .leftcolumn {
     text-align: left;
-    ul li {
-      display: inline;
+    ul {
+      float: right;
+      li {
+        display: inline;
+      }
     }
   }
 }
