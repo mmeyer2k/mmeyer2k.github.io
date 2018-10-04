@@ -3,10 +3,9 @@ layout: post
 title: Extending Blade to support continue and break
 ---
 
-Laravel's Blade templating engine is easy to extend. The following example service provider
-adds support for `continue` and `break` within loops with `@continue` and `@break`. Even though
-it is a best practice not to use logic like that in views, it is handy sometimes when porting
-legacy code.
+Laravel's Blade templating engine is easy to extend. 
+The following example service provider adds support for `continue` and `break` within loops with `@continue` and `@break`. 
+Even though it is a best practice not to use logic like that in views, it is handy sometimes when porting legacy code.
 
 {% highlight php %}
 <?php
