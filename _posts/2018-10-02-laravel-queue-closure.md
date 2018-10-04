@@ -7,7 +7,9 @@ tags: [laravel, php]
 
 As of Laravel 5.1, queueing closure jobs is no longer allowed.
 I get it, serializing / storing / deserializing closures is not a good practice. 
-Security vulnerabilities are just one of the many good reasons to ditch them.
+Security vulnerabilities are just one of the many good reasons to ditch them...
+
+But just one more closure job won't hurt, right? I can quit any time. Yep, any... t-time.
 
 ---
 Add this job to your jobs folder (normally `app/Jobs`).
