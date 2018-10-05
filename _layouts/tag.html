@@ -3,5 +3,8 @@ layout: layout
 title: "Posts"
 tags: [php, tutorials, linux, security, redis]
 ---
-<h1>Posts tagged "{{ page.tag }}"</h1>
+<h1>Posts tagged "{{ page.tag | smartify }}"</h1>
 {% include posts.html %}
+
+<h3>Tag Cloud</h3>
+{% include tagcloud.html %}

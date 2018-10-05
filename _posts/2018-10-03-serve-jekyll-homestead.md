@@ -31,18 +31,18 @@ block="server {
     # disable all caching which could cause confusion in a dev environment
     add_header 'Cache-Control' 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
     expires off;
-        
-    # if request is asking for .html page, redirect to url without .html
-    # (for seo purposes, you may not want this)
-    if ( \$request_uri ~ ^/(.*)\.html\$ ) {
-        return 302 /\$1;
-    }
     
     # restrict to only allow GET and HEAD directives
     # this is optional and mostly done for autistic reasons
     add_header Allow \"GET, HEAD\" always;
     if ( \$request_method !~ ^(GET|HEAD)\$ ) {
     	return 405;
+    }
+        
+    # if request is asking for .html page, redirect to url without .html
+    # (for seo purposes, you may not want this)
+    if ( \$request_uri ~ ^/(.*)\.html\$ ) {
+        return 302 /\$1;
     }
     
     # attempt to resolve urls lacking .html extension
