@@ -1,5 +1,7 @@
 ---
 layout: layout
+title: "Posts"
+tags: [php, tutorials, linux, security, redis]
 ---
-
-{{ page.tag }}
+<h1>Posts tagged "{{ page.tag }}"</h1>
+{% include posts.html %}
