@@ -2,7 +2,8 @@ permalink: /posts/:title
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-name: mmeyer2k
 url: http://mmeyer2k.github.io
 highlighter: rouge
+logo: /images/xor.png

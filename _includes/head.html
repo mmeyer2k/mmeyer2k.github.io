@@ -3,8 +3,6 @@
 
     <meta charset="utf-8">
 
-    <title>{{ page.title }} &ndash; {{ site.name }}</title>
-
     {% if page.tags %}
     <meta itemprop="keywords" content="{{ page.tags | join: ', ' }}"/>
     {% endif %}
@@ -19,4 +17,6 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection"/>
     <link rel="stylesheet" href="/css/highlighter.css" type="text/css" media="screen, projection"/>
+
+    {% seo %}
 </head>

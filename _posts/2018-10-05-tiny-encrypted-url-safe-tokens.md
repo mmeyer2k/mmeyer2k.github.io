@@ -1,8 +1,6 @@
 ---
 layout: post
 title: How to create tiny, URL-safe encrypted tokens
-category: posts
-draft: false
 tags: [php, security, laravel, composer]
 ---
 

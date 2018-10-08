@@ -1,7 +1,6 @@
 ---
 title: Limiting email send rate in Laravel
 tags: [laravel, redis, php]
-category: posts
 layout: post
 ---
 Recently, I was tasked with diagnosing why emails sent by a web application to a company internal email address were not always arriving in the inbox.
