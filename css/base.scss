@@ -3,7 +3,7 @@
 ---
 
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Lato|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 $sidebar-width-full: 200px;
 $sidebar-height-collapsed: 50px;
@@ -17,12 +17,12 @@ p {
 }
 
 body {
-  font-family: 'PT Sans', 'Lato', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
-  font-family: 'PT Sans', 'Lato', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .leftcolumn {
