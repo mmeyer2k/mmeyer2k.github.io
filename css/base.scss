@@ -5,7 +5,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Lato|PT+Sans');
 
-$sidebar-width-full: 384px;
+$sidebar-width-full: 200px;
 $sidebar-height-collapsed: 50px;
 
 * {
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
   background-color: #202020;
   color: white;
   overflow-x: hidden;
-  padding-top: 100px;
+  padding-top: 25px;
   padding-right: 40px;
   text-align: right;
   a {
@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
     padding-top: 10px;
     font-style: italic;
     opacity: .25;
+  }
+  ul{
+    margin-top: 20px;
   }
 }
 
@@ -84,11 +87,11 @@ td {
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {
     width: 100%;
-    padding: 0;
   }
   .rightcolumn {
     margin-top: $sidebar-height-collapsed;
     margin-left: 0;
+    padding: 1px 5px 2px 5px;
   }
   .leftcolumn {
     padding: 12px 20px 0px 20px;
@@ -99,6 +102,7 @@ td {
       display: none;
     }
     ul {
+      margin-top: 0px;
       float: right;
       li {
         display: inline;
