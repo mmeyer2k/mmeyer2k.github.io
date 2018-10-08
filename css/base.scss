@@ -71,6 +71,10 @@ ul {
   animation: blinker 1s linear infinite;
 }
 
+td {
+  white-space: nowrap;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;
@@ -103,5 +107,8 @@ ul {
         }
       }
     }
+  }
+  #posts td:first-child {
+    display: none;
   }
 }
