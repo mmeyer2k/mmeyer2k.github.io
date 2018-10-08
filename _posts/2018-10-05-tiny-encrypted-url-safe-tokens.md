@@ -4,7 +4,6 @@ title: How to create tiny, URL-safe encrypted tokens
 category: posts
 draft: false
 tags: [php, security, laravel, composer]
-img-title: /images/forest.jpg
 ---
 
 Recently, I updated my encryption library (<a href="https://github.com/mmeyer2k/dcrypt">dcrypt</a>) support customization of the cipher and checksum options.
@@ -81,7 +80,6 @@ $token = TinyCrypt::encrypt('secret', 'password');
 
 # you can now use this token in a url, for example
 # https://example.com/something/$token
-
 
 $secret = TinyCrypt::decrypt($token, 'password');
 
