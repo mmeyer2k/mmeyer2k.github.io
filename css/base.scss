@@ -41,12 +41,6 @@ h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
   a {
     color: white;
   }
-  p {
-    font-size: 10pt;
-    padding-top: 10px;
-    font-style: italic;
-    opacity: .25;
-  }
   hr {
     display: block;
     height: 1px;
@@ -102,6 +96,9 @@ td {
     height: $sidebar-height-collapsed;
     text-align: left;
     font-size: 18px;
+    div {
+      display: none;
+    }
     p {
       display: none;
     }
@@ -118,7 +115,7 @@ td {
       display: none;
     }
   }
-  #posts td:first-child {
+  #posts td:first-child, #posts td:last-child {
     display: none;
   }
 }
