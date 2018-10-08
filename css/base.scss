@@ -36,8 +36,7 @@ h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
   background-color: #202020;
   color: white;
   overflow-x: hidden;
-  padding-top: 25px;
-  padding-right: 40px;
+  padding: 25px 20px 0px 20px;
   text-align: right;
   a {
     color: white;
@@ -48,8 +47,13 @@ h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
     font-style: italic;
     opacity: .25;
   }
-  ul{
-    margin-top: 20px;
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #555555;
+    margin: 1em 0;
+    padding: 0; 
   }
 }
 
@@ -102,7 +106,6 @@ td {
       display: none;
     }
     ul {
-      margin-top: 0px;
       float: right;
       li {
         display: inline;
@@ -110,6 +113,9 @@ td {
           margin-left: 5px;
         }
       }
+    }
+    hr {
+      display: none;
     }
   }
   #posts td:first-child {
