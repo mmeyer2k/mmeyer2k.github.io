@@ -2,9 +2,9 @@
 layout: post
 title: Sample draft post
 tags: [php, laravel, security, jekyll]
-img-title: /image/jekyll-wide.png
+img-title: /images/redis-logo-wide.png
 ---
 
-Stuff goes here...
+write something...
 
 ---
