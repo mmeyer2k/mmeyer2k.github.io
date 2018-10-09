@@ -2,6 +2,6 @@
 
 apt install ruby ruby-dev make gcc
 
-gem install jekyll bundler rouge
+gem install bundler rouge
 
 bundler install

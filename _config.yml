@@ -1,8 +1,9 @@
 permalink: /posts/:title
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 github: mmeyer2k
 
