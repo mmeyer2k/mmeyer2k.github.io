@@ -2,6 +2,7 @@
 title: Limiting email send rate in Laravel
 tags: [laravel, redis, php]
 layout: post
+symbol: ⇣
 ---
 Recently, I was tasked with diagnosing why emails sent by a web application to a company internal email address were not always arriving in the inbox.
 This internal email was hosted on Google Apps, which has a receiving rate limit of 60 per minute.

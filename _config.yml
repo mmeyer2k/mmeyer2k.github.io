@@ -4,6 +4,16 @@ gems:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+github: mmeyer2k
+
 url: http://mmeyer2k.github.io
+
 highlighter: rouge
+
 logo: /images/xor.png
+
+markdown: kramdown
+
+analytics: UA-40063960-2
+
+encoding: UTF-8

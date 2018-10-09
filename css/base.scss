@@ -1,5 +1,4 @@
 ---
-#
 ---
 
 @charset "UTF-8";
@@ -7,6 +6,7 @@
 
 $sidebar-width-full: 200px;
 $sidebar-height-collapsed: 50px;
+$breakpoint: 800px;
 
 * {
   box-sizing: border-box;
@@ -82,7 +82,7 @@ td {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $breakpoint) {
   .leftcolumn, .rightcolumn {
     width: 100%;
   }
@@ -90,6 +90,11 @@ td {
     margin-top: $sidebar-height-collapsed;
     margin-left: 0;
     padding: 1px 5px 2px 5px;
+    #posts td {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 1.1em;
+    }
   }
   .leftcolumn {
     padding: 12px 20px 0px 20px;
