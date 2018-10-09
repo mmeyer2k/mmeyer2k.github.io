@@ -21,10 +21,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, p, table, img, a, ul {
-  font-family: 'PT Sans', sans-serif;
-}
-
 .leftcolumn {
   height: 100%;
   width: $sidebar-width-full;
@@ -72,8 +68,9 @@ ul {
   animation: blinker 1s linear infinite;
 }
 
-td {
+#posts td {
   white-space: nowrap;
+  padding: 8px 0px 8px 0px;
 }
 
 @keyframes blinker {
@@ -91,9 +88,8 @@ td {
     margin-left: 0;
     padding: 1px 5px 2px 5px;
     #posts td {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      font-size: 1.1em;
+      padding: 14px 4px 14px 4px;
+      font-size: 1.2em;
     }
   }
   .leftcolumn {
@@ -120,7 +116,7 @@ td {
       display: none;
     }
   }
-  #posts td:first-child, #posts td:last-child {
+  #posts td:last-child {
     display: none;
   }
 }

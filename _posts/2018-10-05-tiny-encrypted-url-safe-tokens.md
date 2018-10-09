@@ -2,7 +2,6 @@
 layout: post
 title: How to create tiny, URL-safe encrypted tokens
 tags: [php, security, laravel, composer]
-symbol: 🔒
 ---
 
 Recently, I updated my encryption library (<a href="https://github.com/mmeyer2k/dcrypt">dcrypt</a>) support customization of the cipher and checksum options.

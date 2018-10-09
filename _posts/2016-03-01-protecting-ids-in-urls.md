@@ -2,7 +2,6 @@
 layout: post
 title: Protecting Identifiers in URLs with authenticated encryption
 tags: [php, security]
-symbol: 🔒
 ---
 
 Passing identifiers inside of URL's is a very common practice, but it offers no security against manipulation of the ID value. 
