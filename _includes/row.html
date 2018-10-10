@@ -1,4 +1,8 @@
 <tr>
     <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-    <td>{{ post.date | date_to_string }}</td>
+    <td>
+        {% if post.date %}
+        {{ post.date | date_to_string }}
+        {% endif %}
+    </td>
 </tr>
