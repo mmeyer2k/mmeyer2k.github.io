@@ -115,12 +115,19 @@ a:hover {
       padding: 14px 4px 14px 4px;
       font-size: 1.2em;
     }
+    #posts td:last-child {
+      display: none;
+    }
   }
   .leftcolumn {
     padding: 12px 10px 0px 10px;
     height: $sidebar-height-collapsed;
     text-align: left;
     font-size: 18px;
+    .mobilehide,
+    hr {
+      display:none;
+    }
     ul {
       float: right;
       li {
@@ -130,11 +137,5 @@ a:hover {
         }
       }
     }
-    hr {
-      display: none;
-    }
-  }
-  #posts td:last-child {
-    display: none;
   }
 }
