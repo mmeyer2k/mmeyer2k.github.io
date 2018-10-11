@@ -2,25 +2,51 @@
 ---
 
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+// use google fonts
+// multiple fonts can be loaded with font+1|font+2
+//@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+// width of the sidebar in desktop view
 $sidebar-width-full: 200px;
-$sidebar-height-collapsed: 50px;
+
+// point at which to switch between desktop and tablet
 $breakpoint: 800px;
 
+// height of nav bar in tablet mode
+$sidebar-height-collapsed: 50px;
+
+
+/*
+  global
+*/
 * {
   box-sizing: border-box;
 }
 
-p {
-  cursor: default;
+ul {
+  list-style: none;
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/*
+  columns
+*/
 .leftcolumn {
   height: 100%;
   width: $sidebar-width-full;
@@ -37,6 +63,8 @@ body {
   a {
     color: white;
   }
+
+  // This whole block is needed just to change hr color =(
   hr {
     display: block;
     height: 1px;
@@ -45,41 +73,36 @@ body {
     margin: 1em 0;
     padding: 0; 
   }
+
+  .blinking-cursor {
+    animation: blinker 1s linear infinite;
+  }
 }
 
 .rightcolumn {
   margin-left: $sidebar-width-full;
-  padding: 0px 40px;
-}
+  padding: 0px 20px;
 
-a {
-  color: #227ce8;
-}
+  #posts td {
+    white-space: nowrap;
+    padding: 8px 0px 8px 0px;
+  }
 
-a:hover {
-  text-decoration: none;
-}
+  p {
+    cursor: default;
+  }
 
-ul {
-  list-style: none;
-}
-
-.blinking-cursor {
-  animation: blinker 1s linear infinite;
-}
-
-#posts td {
-  white-space: nowrap;
-  padding: 8px 0px 8px 0px;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
+  a {
+    color: #227ce8;
   }
 }
 
+
+/*
+  mobile/tablet css overload
+*/
 @media screen and (max-width: $breakpoint) {
+  // make theme responsive by making the columns into a stack
   .leftcolumn, .rightcolumn {
     width: 100%;
   }
@@ -87,13 +110,14 @@ ul {
     margin-top: $sidebar-height-collapsed;
     margin-left: 0;
     padding: 1px 5px 2px 5px;
+    // make posts table easier to click by making padding and font-size larger
     #posts td {
       padding: 14px 4px 14px 4px;
       font-size: 1.2em;
     }
   }
   .leftcolumn {
-    padding: 12px 20px 0px 20px;
+    padding: 12px 10px 0px 10px;
     height: $sidebar-height-collapsed;
     text-align: left;
     font-size: 18px;

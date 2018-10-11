@@ -2,6 +2,7 @@
 layout: post
 title: One Laravel 5 instance to rule them all
 tags: [laravel, php]
+last-updated: 2018-10-11 00:00:00 +0000
 ---
 
 Laravel 5 is awesome, but out of the box, it seems to only allow for a single web root to be served for each installation. 

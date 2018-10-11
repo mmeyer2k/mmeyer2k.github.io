@@ -4,8 +4,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-coffeescript
+  - jekyll-mentions
+  - jekyll-github-metadata
 
-github: mmeyer2k
+repository: mmeyer2k/mmeyer2k.github.io
 
 url: http://mmeyer2k.github.io
 
@@ -19,4 +22,4 @@ analytics: UA-40063960-2
 
 encoding: UTF-8
 
-just-comments-apikey:
+justcomments: c7a5bfa5-2127-4ba9-9892-d4d8ab79b368

@@ -3,9 +3,9 @@ layout: post
 title: Serve Jekyll sites from a Homestead virtual machine
 category: posts
 tags: [laravel, jekyll, nginx, bash, vagrant]
-img-title: /images/jekyll.png
+last-updated: 2018-10-11 00:00:00 +0000
 ---
-Jekyll is a great way to generate static websites. Its simplicity and beauty make it a natural choice for developers
+@Jekyll is a great way to generate static websites. Its simplicity and beauty make it a natural choice for developers
 who prefer to use laravel for heavy lifting but need to create static sites for some reason (like this blog).
 
 For development, Jekyll ships with a `serve` mode which runs an integrated http server and detects local file changes.
@@ -15,7 +15,7 @@ However, I found this was un-reliable in vagrant/homestead shared folders, so I 
 
 In your homestead folder, create a new file at `/scripts/serve-jekyll.sh` with the following content.
 
-{% highlight bash %}
+```bash
 #!/usr/bin/env bash
 
 block="server {
@@ -65,22 +65,25 @@ block="server {
 
 echo "$block" > "/etc/nginx/sites-available/$1"
 ln -fs "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
-{% endhighlight %}
+```
 
 ---
 
 ## Modify your Homestead.yaml
-
+```yaml
     sites:
       ... 
       - map: jekyll.test
         to: /path_to_jekyll/_site
         type: jekyll
       ...
+```
 
 
 ## Start developing
 Once the configurator file is created and Homestead.yaml changes saved, re-provision the VM for the change to take effect. 
 To begin developing run the following command:
 
-    sudo bundle exec jekyll build --watch --force_polling --drafts --future
+```bash
+sudo bundle exec jekyll build --watch --force_polling --drafts --future
+```

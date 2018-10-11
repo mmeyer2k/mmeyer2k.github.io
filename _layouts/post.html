@@ -1,10 +1,6 @@
 ---
 layout: layout
 ---
-{% if page.img-title %}
-<img src="{{ page.img-title }}" alt="" class="img-responsive"/>
-{% endif %}
-
 <h1>
     <a href="{{ page.url }}">{{ page.title }}</a>
 </h1>
@@ -16,16 +12,23 @@ layout: layout
     {% endfor %}
 </small>
 
+{% if page.last-updated %}
+<br>
+<small style="text-decoration-style: ">
+    Last updated: {{ page.last-updated | date: "%B %e, %Y" }}
+</small>
+{% endif %}
+
 <hr>
 
 {{ content }}
 
 <hr>
 
-{% if site.just-comments-apikey %}
+{% if site.justcomments %}
 <div
 	class="just-comments"
-	data-apikey="{{ site.just-comments-apikey }}">
+	data-apikey="{% if jekyll.environment == 'production' %}{{ site.justcomments }}{% else %}non_existant_key{% endif %}">
 </div>
 <script async src="https://just-comments.com/w.js"></script>
 {% endif %}
