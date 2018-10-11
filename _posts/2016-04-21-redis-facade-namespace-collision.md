@@ -2,7 +2,6 @@
 layout: post
 title: Redis facade namespace collision
 tags: [redis, laravel]
-img-title: /images/redis-logo-wide.png
 ---
 
 ### Be careful when using phpredis and Laravel's `\Redis` facade!
