@@ -60,3 +60,5 @@ This view gives a good idea a web application's access patterns.
 ```bash
 watch redis-cli lrange urilog -20 -1
 ```
+
+<img src="/images/urilog.png">
