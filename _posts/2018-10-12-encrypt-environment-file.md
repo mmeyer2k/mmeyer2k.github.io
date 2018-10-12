@@ -130,6 +130,8 @@ class EnvDecrypt extends Command
 
 #### Basic usage
 
+Encryption and decryption functions can be accessed via artisan commands. 
+Always be sure to freshly run `env:decrypt` before making changes so that any other developer changes in `.env.production.enc` are not reversed.
 
 ```bash
 php artisan env:encrypt # .env.production -> (encrypt) -> .env.production.enc
@@ -139,8 +141,7 @@ php artisan env:decrypt # .env.production <- (decrypt) <- .env.production.enc
 
 #### Automate change deployment
 
-Add this to any relevant sections of your `Envoy.blade.php`. 
-This will decrypt the production env file and overwrite the contents of `.env` with it.
+Add this to any relevant sections of your `Envoy.blade.php` to decrypt and overwrite the contents of `.env` with `.env.production`.
 
 ```bash
 php artisan env:decrypt ; cp -fv .env.production .env
