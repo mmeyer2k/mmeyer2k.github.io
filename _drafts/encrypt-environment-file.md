@@ -128,11 +128,20 @@ class EnvDecrypt extends Command
 
 ---
 
-#### Usage
-
+#### Basic usage
 
 
 ```bash
-php artisan env:encrypt
-php artisan env:decrypt
+php artisan env:encrypt # .env.production -> (encrypt) -> .env.production.enc
+php artisan env:decrypt # .env.production <- (decrypt) <- .env.production.enc
+```
+---
+
+#### Automate change deployment
+
+Add this to any relevant sections of your `Envoy.blade.php`. 
+This will decrypt the production env file and overwrite the contents of `.env` with it.
+
+```bash
+php artisan env:decrypt ; cp -fv .env.production .env
 ```
