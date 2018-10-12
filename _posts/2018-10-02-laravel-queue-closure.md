@@ -12,12 +12,11 @@ But just one more closure job won't hurt, right? I can quit any time. Yep, any..
 
 ---
 Add this job to your jobs folder (normally `app/Jobs`).
-{% highlight php %}
+```php
 <?php
 
 namespace App\Jobs;
 
-use App\Models\Atomic;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use SuperClosure\Serializer;
 
@@ -45,12 +44,12 @@ class ClosureJob extends Command implements ShouldQueue
         $closure();
     }
 }
-{% endhighlight %}
+```
 
 ---
 To utilize your job, pass your closure as a parameter.
 
-{% highlight php %}
+```php
 <?php
 
 use App\Jobs\ClosureJob;
@@ -58,5 +57,4 @@ use App\Jobs\ClosureJob;
 \Queue::push(new ClosureJob(function() {
     // do something...
 }));
-
-{% endhighlight %}
+```

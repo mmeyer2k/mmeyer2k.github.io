@@ -51,6 +51,8 @@ class UriLogger
 }
 ```
 
+The list will be limited to 5000 entries, so you don't have to worry about consuming all memory.
+
 ---
 
 #### Monitor requests
