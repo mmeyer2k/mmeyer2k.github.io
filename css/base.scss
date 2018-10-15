@@ -43,7 +43,7 @@ a:hover {
 /*
   columns
 */
-.leftcolumn {
+nav {
   height: 100%;
   width: $sidebar-width-full;
   position: fixed;
@@ -90,7 +90,7 @@ a:hover {
     color: #227ce8;
   }
   pre {
-    box-shadow: 2px 2px 2px grey;
+    box-shadow: 2px 2px 2px #b5b5b5;
   }
 }
 
@@ -100,7 +100,7 @@ a:hover {
 */
 @media screen and (max-width: $breakpoint) {
   // make theme responsive by making the columns into a stack
-  .leftcolumn, .rightcolumn {
+  nav, .rightcolumn {
     width: 100%;
   }
   .rightcolumn {
@@ -116,23 +116,40 @@ a:hover {
       display: none;
     }
   }
-  .leftcolumn {
-    padding: 12px 10px 0px 10px;
+  nav {
+    padding: 6px 10px 0px 10px;
     height: $sidebar-height-collapsed;
     text-align: left;
-    font-size: 18px;
-    .mobilehide,
-    hr {
-      display:none;
-    }
-    ul {
+    font-size: 20pt;
+    div.burger {
       float: right;
-      li {
-        display: inline;
-        a {
-          margin-left: 5px;
-        }
+      display: inline-block;
+      cursor: pointer;
+      .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #e0e0e0;
+          margin: 6px 0;
+          transition: 0.4s;
       }
     }
+    hr, ul {
+      display: none;
+    }
+  }
+  nav.change {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .bar2 {opacity: 0;}
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+    ul {
+      display: block;
+    }
+    height: auto;
   }
 }
