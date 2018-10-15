@@ -63,14 +63,10 @@ class EnvEncrypt extends Command
 
         $path = \base_path('.env.production');
 
-        // Get file contents
         $text = \file_get_contents($path);
 
-        // Encrypt file data
-        \Crypt::encryptString($serialized);
         $enc = $crypt->encrypt($text);
 
-        // Write encrypted environment file
         \file_put_contents($path . '.enc', $enc);
 
         $this->info("Encypted environment file");
@@ -106,13 +102,10 @@ class EnvDecrypt extends Command
 
         $path = \base_path('.env.production');
 
-        // Get file contents
         $enc = \file_get_contents($path . '.enc');
 
-        // Decrypt file data
         $dec = $crypt->decrypt($enc);
 
-        // Overwrite old file with freshly encrypted data
         \file_put_contents($path, $dec);
 
         $this->info("Decrypted environment file");
@@ -146,3 +139,12 @@ Add this to any relevant sections of your `Envoy.blade.php` to decrypt and overw
 ```bash
 php artisan env:decrypt ; cp -fv .env.production .env
 ```
+
+---
+
+#### Sanitize repository
+Now that you are following best practices, its time to atone for past mistakes.
+
+- delete the plaintext `.env.production` from source control
+- add `.env.production` to `.gitignore` or whatever you have to do to exclude this file from source control
+- change all important api keys

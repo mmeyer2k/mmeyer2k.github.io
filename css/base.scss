@@ -24,10 +24,6 @@ $sidebar-height-collapsed: 50px;
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
-
 body {
   font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,9 +59,8 @@ a:hover {
   a {
     color: white;
   }
-
-  // This whole block is needed just to change hr color =(
   hr {
+    // This whole block is needed just to change hr color =(
     display: block;
     height: 1px;
     border: 0;
@@ -73,27 +68,29 @@ a:hover {
     margin: 1em 0;
     padding: 0; 
   }
-
   .blinking-cursor {
     animation: blinker 1s linear infinite;
+  }
+  ul {
+    list-style: none;
   }
 }
 
 .rightcolumn {
   margin-left: $sidebar-width-full;
   padding: 0px 20px;
-
   #posts td {
     white-space: nowrap;
     padding: 8px 0px 8px 0px;
   }
-
   p {
     cursor: default;
   }
-
   a {
     color: #227ce8;
+  }
+  pre {
+    box-shadow: 2px 2px 2px grey;
   }
 }
 
