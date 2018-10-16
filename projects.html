@@ -2,3 +2,20 @@
 layout: layout
 title: "Projects"
 ---
+<table class="table">
+    {% assign repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
+    {% for repo in repos %}
+    {% if repo.stargazers_count > 0 %}
+    <tr>
+        <td>
+            <a href="{{ repo.html_url }}" target="_blank">
+                {{ repo.name }}
+            </a>
+        </td>
+        <td>
+            {{ repo.description }}
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
