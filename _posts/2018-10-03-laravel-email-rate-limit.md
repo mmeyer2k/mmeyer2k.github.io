@@ -8,7 +8,7 @@ This internal email was hosted on Google Apps, which has a receiving rate limit 
 Any emails that exceed the quota are dropped, though the documentation says they are bounced. 
 THIS IS A LIE!
 
-To solve this problem, I used Laravel event listeners and the magic of Redis.
+To solve this problem, I used Laravel event listeners and the magic of @antirez's Redis.
 
 ---
 

@@ -120,7 +120,6 @@ nav {
     padding: 6px 10px 0px 10px;
     height: $sidebar-height-collapsed;
     text-align: left;
-    font-size: 20pt;
     div.burger {
       float: right;
       display: inline-block;
@@ -147,9 +146,12 @@ nav {
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
     }
-    ul {
+    ul, hr {
       display: block;
     }
     height: auto;
+    li {
+      margin-bottom: 14px;
+    }
   }
 }
