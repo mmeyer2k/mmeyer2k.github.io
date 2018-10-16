@@ -7,13 +7,17 @@ title: "Projects"
     {% for repo in repos %}
     {% if repo.stargazers_count > 0 %}
     <tr>
-        <td>
+        <td style="white-space: nowrap;">
             <a href="{{ repo.html_url }}" target="_blank">
                 {{ repo.name }}
             </a>
         </td>
         <td>
             {{ repo.description }}
+        </td>
+        <td style="white-space: nowrap;">
+            :star:
+            {{ repo.stargazers_count }}
         </td>
     </tr>
     {% endif %}

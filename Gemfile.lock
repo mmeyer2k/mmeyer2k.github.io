@@ -251,6 +251,7 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.5.0)
   jekyll-sitemap (= 1.2.0)
   jekyll-watch
+  jemoji (~> 0.10.1)
 
 BUNDLED WITH
    1.16.6
