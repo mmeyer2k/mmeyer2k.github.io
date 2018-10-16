@@ -12,12 +12,12 @@ However, with a few minor tweaks, one installation of the framework can power an
  
 #### Handling the public/ folder
 Most of the time, the `public/` folder IS the webroot. 
-For our purpose, `public/example/` will be the new structure. T
-his gives us the flexibility to add as many roots as needed.
+For our purpose, `public/example/` will be the new structure. 
+This gives the flexibility to add as many roots as needed.
 
 To turn `/public/example` into a webroot, place the following into `/public/example/index.php`:
 
-{% highlight php %}
+```php
 <?php
 
 // Set a variable that contains the name of the
@@ -27,7 +27,7 @@ define('PUBLIC_SUBROOT', basename(__DIR__));
 
 // Launch laravel as normal.
 require __DIR__ . '/../index.php';
-{% endhighlight %}
+```
 
 ---
 
@@ -35,11 +35,11 @@ require __DIR__ . '/../index.php';
 Usually in Laravel 5, an applications's routes are stored at `/routes/app.php`. 
 All that needs to be done to make this trick work is to modify this file to contain something like the following:
 
-{% highlight php %}
+```php
 <?php
 
 require base_path('/resources/routes/' . PUBLIC_SUBROOT . '.php');
-{% endhighlight %}
+```
 
 Now when a request comes into example.com (or where ever) Laravel will run and execute the `/resources/routes/example.php` file. 
 Laravel should be working as usual now.
