@@ -8,10 +8,14 @@ Often times, there is a need to remember a value across far-reaching areas of an
 Traditionally, global variables are used for this purpose, but they are unwieldy and somewhat of an anti-pattern.
 A globally accessable singleton object which simply stores and fetches key/value pairs from memory has several advantages.
 
-The memory is freed at the end of the request.
+- Easier to unit test
+- Code is usually easier to read
+- The memory is freed at the end of the request (just like `const`)
+- When using `define`, case sensitivity is ambiguous
+- `Remember` allows storage of objects, `define` does not
 
 ---
-## Create `Remember` model
+## Create `Remember` singleton model
 
 Create a new model at `app\Models\Remember.php`.
 
@@ -31,11 +35,6 @@ class Remember
 
     }
 
-    /**
-     * Start the singleton instance
-     *
-     * @return self
-     */
     public static function getInstance(): self
     {
         if (self::$instance == null) {
@@ -45,23 +44,11 @@ class Remember
         return self::$instance;
     }
 
-    /**
-     * Set a variable
-     *
-     * @param string $key
-     * @param $value
-     */
     public static function set(string $key, $value)
     {
         self::$attrs[$key] = $value;
     }
 
-    /**
-     * Get a variable
-     *
-     * @param string $key
-     * @return mixed
-     */
     public static function get(string $key)
     {
         return self::$attrs[$key];
@@ -89,7 +76,7 @@ $value = Remember::get('key');
 
 ## Value types
 
-Values can be of any type due to the fact they are stored as a simple indexed array.
+Values can be of any type due to the fact they are stored as a elements in an indexed array.
 
 ```php
 <?php
@@ -97,6 +84,10 @@ Values can be of any type due to the fact they are stored as a simple indexed ar
 use App\Models\Remember;
 
 // Set a key/value
-Remember::set('key', [1, 2, 3, 4, 5]);
+Remember::set('key', [1, 2, 3]);
+
+$x = is_array(Remember::get('key');
+
+# $x === true
 
 ```
