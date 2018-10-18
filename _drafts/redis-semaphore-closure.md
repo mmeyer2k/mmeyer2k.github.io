@@ -25,7 +25,8 @@ save_number_to_database($x);
 
 ```
 
-Notice how if 2 threads
+The results are counter intuitive when being accessed by multiple threads.
+Two successive calls lead to only one incrementation being saved.
 
 ---
 
@@ -54,4 +55,12 @@ class RedisLock
         return $mutex->synchronized($closure);
     }
 }
+```
+
+---
+
+#### Return values
+```
+<?php
+
 ```

@@ -3,7 +3,7 @@ layout: layout
 title: "Projects"
 ---
 <table class="table">
-    {% assign repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
+    {% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
     {% for repo in repos %}
     {% if repo.stargazers_count > 0 %}
     <tr>
