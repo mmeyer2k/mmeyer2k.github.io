@@ -43,7 +43,7 @@ namespace App;
 
 class RedisLock
 {
-    public function synchronize(string $key, int $wait, \Closure $closure)
+    public static function synchronize(string $key, int $wait, \Closure $closure)
     {
         // Load redis instance
         $redis = new \Predis\Client("redis://localhost");
