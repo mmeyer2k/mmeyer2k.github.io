@@ -6,8 +6,10 @@ layout: layout
 </h1>
 
 <small>
+    📅
     {{ page.date | date: "%B %e, %Y" }}
     &nbsp;
+    🏷️
     {% for tag in page.tags %}
     <a href="/tags/{{ tag }}">{{ tag }}</a>
     {% endfor %}
