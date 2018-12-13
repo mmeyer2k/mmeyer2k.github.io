@@ -34,7 +34,7 @@ Open your `.circleci/config.yml` file and replace your standard `-checkout` step
             git config --global gc.auto 0 || true
 
             # get shallow clone of single repo branch for speed purposes
-            git clone --depth=1 --single-branch -b $CIRCLE_BRANCH git@github.com:$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME "/$CIRCLE_PROJECT_REPONAME"
+            git clone --depth=1 --single-branch -b $CIRCLE_BRANCH git@github.com:$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME $CIRCLE_WORKING_DIRECTORY
 ```
 
 ### Notes
