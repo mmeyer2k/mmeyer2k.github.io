@@ -36,3 +36,7 @@ Open your `.circleci/config.yml` file and replace your standard `-checkout` step
             # get shallow clone of single repo branch for speed purposes
             git clone --depth=1 --single-branch -b $CIRCLE_BRANCH git@github.com:$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME "/$CIRCLE_PROJECT_REPONAME"
 ```
+
+### Notes
+- only has github ssh key
+- checks out code to /[repo name] which may or may not work for you
