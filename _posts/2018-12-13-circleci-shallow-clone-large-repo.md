@@ -2,6 +2,7 @@
 layout: post
 title: Shallow clone your repo to speed up circle-ci builds
 tags: [github, bash, circle-ci]
+last-updated: 2019-01-03 00:00:00 +0000
 ---
 
 # Find out how a developer decreased CI build time by 20%
@@ -34,9 +35,9 @@ Open your `.circleci/config.yml` file and replace your standard `-checkout` step
             git config --global gc.auto 0 || true
 
             # get shallow clone of single repo branch for speed purposes
-            git clone --depth=1 --single-branch -b $CIRCLE_BRANCH git@github.com:$CIRCLE_USERNAME/$CIRCLE_PROJECT_REPONAME $CIRCLE_WORKING_DIRECTORY
+            git clone --depth=1 --single-branch -b $CIRCLE_BRANCH git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME $CIRCLE_WORKING_DIRECTORY
 ```
 
 ### Notes
-- only has github ssh key
+- only has github ssh key, if you use bitbucket you will need to modify this
 - checks out code to /[repo name] which may or may not work for you
