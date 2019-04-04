@@ -4,6 +4,8 @@ title: Using PHP semaphores to ensure exclusive execution
 tags: [php]
 ---
 
+UPDATE: this code in this post is now an [installable project](https://github.com/mmeyer2k/semlock)
+
 A common problem faced in multi-user, real-world web applications is errors that arise with simultaneous access to a resource.
 Ensuring that a block of code can only be running in a single thread eliminates this class of problems and ensures data integrity.
 PHP's semaphores are useful for this purpose, but properly implementing them can be tricky and it is best to encapsulate this functionality.
