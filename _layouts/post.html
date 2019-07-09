@@ -25,13 +25,3 @@ layout: layout
 <hr>
 
 {{ content }}
-
-<hr>
-
-{% if site.justcomments %}
-<div
-	class="just-comments"
-	data-apikey="{% if jekyll.environment == 'production' %}{{ site.justcomments }}{% else %}non_existant_key{% endif %}">
-</div>
-<script async src="https://just-comments.com/w.js"></script>
-{% endif %}
