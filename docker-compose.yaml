@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  jekyll:
+    image: mmeyer2k-github-io:latest
+    ports:
+      - 9999:4000
+    volumes:
+      - ./:/site
